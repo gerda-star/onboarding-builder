@@ -3,6 +3,8 @@ package computerProject.configurations;
 import computerProject.Computer;
 import computerProject.ComputerBuilder;
 
+
+
 public class GamingComputerBuilder implements ComputerBuilder {
     private String cpu;
     private String ram;
@@ -10,6 +12,9 @@ public class GamingComputerBuilder implements ComputerBuilder {
     private String powerSupply;
     private String hardDisk;
     private String monitor;
+    private String headphone;
+    private String printer;
+    private String stylus;
 
     public GamingComputerBuilder() {
         super();
@@ -58,8 +63,27 @@ public class GamingComputerBuilder implements ComputerBuilder {
     }
 
     @Override
+    public ComputerBuilder addHeadphone() {
+        System.out.println("... Assembling the Headphone");
+        this.headphone = "Headphone for gaming";
+        return this;
+    }
+
+    @Override
+    public ComputerBuilder addPrinter() {
+        this.printer = null;
+        return this;
+    }
+
+    @Override
+    public ComputerBuilder addStylus() {
+        this.stylus = null;
+        return this;
+    }
+
+    @Override
     public Computer build() {
-        Computer computer = new Computer(cpu, ram, graphicsCard, powerSupply, hardDisk, monitor);
+        Computer computer = new Computer(cpu, ram, graphicsCard, powerSupply, hardDisk, monitor, headphone, printer,stylus);
         if (computer.doQualityCheck()) {
             System.out.println("Computer for gaming is assembled!");
             return computer;
@@ -68,4 +92,5 @@ public class GamingComputerBuilder implements ComputerBuilder {
         }
         return null;
     }
+
 }

@@ -14,6 +14,12 @@ public interface ComputerBuilder {
 
     public ComputerBuilder addMonitor();
 
+    public ComputerBuilder addHeadphone();
+
+    public ComputerBuilder addPrinter();
+
+    public ComputerBuilder addStylus();
+
     public Computer build();
 
 }

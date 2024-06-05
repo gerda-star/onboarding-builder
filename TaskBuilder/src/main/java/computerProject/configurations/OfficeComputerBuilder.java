@@ -10,6 +10,9 @@ public class OfficeComputerBuilder implements ComputerBuilder {
     private String powerSupply;
     private String hardDisk;
     private String monitor;
+    private String headphone;
+    private String printer;
+    private String stylus;
 
     public OfficeComputerBuilder() {
         super();
@@ -58,10 +61,29 @@ public class OfficeComputerBuilder implements ComputerBuilder {
     }
 
     @Override
+    public ComputerBuilder addHeadphone() {
+        this.headphone = null;
+        return this;
+    }
+
+    @Override
+    public ComputerBuilder addPrinter() {
+        System.out.println("... Assembling the Printer");
+        this.printer = "Printer for office work";
+        return this;
+    }
+
+    @Override
+    public ComputerBuilder addStylus() {
+        this.stylus = null;
+        return this;
+    }
+
+    @Override
     public Computer build() {
-        Computer computer = new Computer(cpu, ram, graphicsCard, powerSupply, hardDisk, monitor);
+        Computer computer = new Computer(cpu, ram, graphicsCard, powerSupply, hardDisk, monitor, headphone, printer, stylus);
         if (computer.doQualityCheck()) {
-            System.out.println("Computer for office work is assembled!");
+            System.out.println("Computer for office work is assembled! ");
             return computer;
         } else {
             System.out.println("Computer assembly is incomplete!");

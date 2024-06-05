@@ -10,6 +10,9 @@ public class MultimediaComputerBuilder implements ComputerBuilder {
     private String powerSupply;
     private String hardDisk;
     private String monitor;
+    private String headphone;
+    private String printer;
+    private String stylus;
 
     public MultimediaComputerBuilder() {
         super();
@@ -58,8 +61,28 @@ public class MultimediaComputerBuilder implements ComputerBuilder {
     }
 
     @Override
+    public ComputerBuilder addHeadphone() {
+        System.out.println("... Assembling the Headphone");
+        this.headphone = "Headphone for multimedia projects";
+        return this;
+    }
+
+    @Override
+    public ComputerBuilder addPrinter() {
+        this.printer = null;
+        return this;
+    }
+
+    @Override
+    public ComputerBuilder addStylus() {
+        System.out.println("... Assembling the Stylus");
+        this.stylus = "Stylus for multimedia projects";
+        return this;
+    }
+
+    @Override
     public Computer build() {
-        Computer computer = new Computer(cpu, ram, graphicsCard, powerSupply, hardDisk, monitor);
+        Computer computer = new Computer(cpu, ram, graphicsCard, powerSupply, hardDisk, monitor, headphone, printer, stylus);
         if (computer.doQualityCheck()) {
             System.out.println("Computer for creating multimedia projects is assembled!");
             return computer;

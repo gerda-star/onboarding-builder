@@ -18,6 +18,9 @@ public class ComputerDirector {
                 .addPowerSupply()
                 .addHardDisk()
                 .addMonitor()
+                .addHeadphone()
+                .addPrinter()
+                .addStylus()
                 .build();
     }
 }
