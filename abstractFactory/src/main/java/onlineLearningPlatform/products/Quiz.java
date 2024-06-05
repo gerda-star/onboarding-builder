@@ -1,8 +1,7 @@
 package onlineLearningPlatform.products;
 
 public interface Quiz {
-    void describeQuize();
-    void addQuestions();
+    void createQuize();
     void runQuiz();
     void showResults();
 
