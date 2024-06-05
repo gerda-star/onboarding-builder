@@ -1,7 +1,9 @@
 package onlineLearningPlatform.factorys;
 
+import onlineLearningPlatform.products.Article;
 import onlineLearningPlatform.products.BasicMathQuiz;
 import onlineLearningPlatform.products.Quiz;
+import onlineLearningPlatform.products.Video;
 
 public class MathematicsCourseFactory implements LearningMaterialFactory{
     @Override
@@ -13,6 +15,7 @@ public class MathematicsCourseFactory implements LearningMaterialFactory{
     public Article createArticle() {
         return null;
     }
+
 
     @Override
     public Quiz createQuiz() {
