@@ -17,7 +17,7 @@ public class PDFReporter {
     public void createPDFFile(String content) {
         Document document = new Document();
         try {
-            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("HelloWorld.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("report.pdf"));
             document.open();
             document.add(new Paragraph(content));
             document.close();
