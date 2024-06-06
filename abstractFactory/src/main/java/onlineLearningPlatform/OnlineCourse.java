@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class OnlineCourse {
     LearningMaterialFactory factory;
     boolean isStop = false;
+    Object product;
 
     public OnlineCourse() {
        act();
@@ -23,12 +24,10 @@ public class OnlineCourse {
     }
 
     public LearningMaterialFactory chooseFactory() {
-        System.out.println("***********"
-                + "\n***********"
-                + "\n***********"
+        System.out.println("********************"
                 + "\nДобро пожаловать на онлайн-платформу!"
-                + "\nЧто бы закончить введи 0"
-                + "\nВыбирай направление: математика, программирование");
+                + "\nВыбирай направление: математика, программирование"
+                + "\nПокинуть платформу: введи 0");
         String choice = Reader.scan.nextLine().toLowerCase();
 
         switch (choice) {
@@ -61,21 +60,23 @@ public class OnlineCourse {
         switch (choice) {
             case "видео":
                 System.out.println("==== Поработаем с видео ====");
-                factory.createVideo();
-                return;
+                product = factory.createVideo();
+                break;
             case "статья":
                 System.out.println("==== Поработаем со статьями ====");
-                factory.createArticle();
-                return;
+                product =factory.createArticle();
+                break;
             case "тест":
                 System.out.println("==== Поработаем с тестами ====");
-                factory.createQuiz();
-                return;
+                product =factory.createQuiz();
+                break;
             default:
                 System.out.println("- Такого продукта неть -");
                 System.out.println("====== Пусть будет статья ======");
                 factory.createQuiz();
-                return;
+        }
+        if (product == null) {
+            System.out.println("Работа в этом разделе пока недоступна");
         }
     }
 

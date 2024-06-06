@@ -1,6 +1,8 @@
 package onlineLearningPlatform.products;
 
 public interface Video {
+    void uploadVideo();
     void playVideo();
-    void convertVideoToTest();
+    void convertVideoToText();
+//    void chooseAct();
 }

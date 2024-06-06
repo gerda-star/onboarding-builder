@@ -6,12 +6,22 @@ public class AdvancedProgrammingVideo implements Video{
     }
 
     @Override
+    public void uploadVideo() {
+
+    }
+
+    @Override
     public void playVideo() {
 
     }
 
     @Override
-    public void convertVideoToTest() {
+    public void convertVideoToText() {
 
     }
+
+//    @Override
+//    public void chooseAct() {
+
+//    }
 }
