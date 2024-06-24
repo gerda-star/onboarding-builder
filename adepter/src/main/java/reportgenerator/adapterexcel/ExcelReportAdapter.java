@@ -1,5 +1,6 @@
-package reportGenerator;
+package reportGenerator.adapters;
 
+import reportGenerator.ReportGenerator;
 import reportGenerator.typeReport.ExcelReporter;
 
 public class ExcelReportAdapter implements ReportGenerator {
