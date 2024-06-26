@@ -20,8 +20,5 @@ public class AdvancedProgrammingVideo implements Video{
 
     }
 
-//    @Override
-//    public void chooseAct() {
 
-//    }
 }

@@ -1,8 +1,7 @@
-package onlineLearningPlatform.products;
+package onlinelearningplatform.products;
 
 public interface Video {
     void uploadVideo();
     void playVideo();
     void convertVideoToText();
-//    void chooseAct();
 }

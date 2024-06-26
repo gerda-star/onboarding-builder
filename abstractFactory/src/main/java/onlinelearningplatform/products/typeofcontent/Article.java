@@ -1,4 +1,4 @@
-package onlineLearningPlatform.products;
+package onlinelearningplatform.products;
 
 public interface Article {
     void openArticle();

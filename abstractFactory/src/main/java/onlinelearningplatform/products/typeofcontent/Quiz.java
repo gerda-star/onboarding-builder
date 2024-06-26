@@ -1,4 +1,4 @@
-package onlineLearningPlatform.products;
+package onlinelearningplatform.products;
 
 public interface Quiz {
     void createQuiz();
