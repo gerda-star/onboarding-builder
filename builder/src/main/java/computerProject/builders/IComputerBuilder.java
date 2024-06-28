@@ -1,25 +1,28 @@
-package computerProject;
+package computerProject.builders;
 
-public interface ComputerBuilder {
+import computerProject.Computer;
 
-    public ComputerBuilder addCPU();
+public interface IComputerBuilder {
 
-    public ComputerBuilder addRAM();
 
-    public ComputerBuilder addGraphicsCard();
+    IComputerBuilder addCPU();
 
-    public ComputerBuilder addPowerSupply();
+    IComputerBuilder addRAM();
 
-    public ComputerBuilder addHardDisk();
+    IComputerBuilder addGraphicsCard();
 
-    public ComputerBuilder addMonitor();
+    IComputerBuilder addPowerSupply();
 
-    public ComputerBuilder addHeadphone();
+    IComputerBuilder addHardDisk();
 
-    public ComputerBuilder addPrinter();
+    IComputerBuilder addMonitor();
 
-    public ComputerBuilder addStylus();
+    IComputerBuilder addHeadphone();
 
-    public Computer build();
+    IComputerBuilder addPrinter();
+
+    IComputerBuilder addStylus();
+
+    Computer build();
 
 }
