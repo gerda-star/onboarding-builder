@@ -1,10 +1,12 @@
 package computerProject;
 
+import computerProject.builders.IComputerBuilder;
+
 public class ComputerDirector {
 
-    private ComputerBuilder builder;
+    private final IComputerBuilder builder;
 
-    public ComputerDirector(ComputerBuilder builder) {
+    public ComputerDirector(IComputerBuilder builder) {
         this.builder = builder;
         if (this.builder == null) {
             throw new IllegalArgumentException("the builder is not specified");

@@ -3,22 +3,51 @@ package computerProject;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Класс конечного продукта
+ */
 @Getter
 @Setter
 public class Computer {
+    /**
+     * Поле процессор - обязательное
+     */
     private String cpu;
+    /**
+     * Поле оперативная память - обязательное
+     */
     private String ram;
+    /**
+     * Поле видеокарта
+     */
     private String graphicsCard;
+    /**
+     * Поле блок питания - обязательное
+     */
     private String powerSupply;
+    /**
+     * Поле жесткий диск
+     */
     private String hardDisk;
+    /**
+     * Поле монитор
+     */
     private String monitor;
-    //for gaming and multimedia
+    /**
+     * Поле гарнитура - только для игрового компьютера, компьютера для работы с мультимедиа
+     */
     private String headphone;
-    //for office
+    /**
+     * Поле принтер - только для офисного компьютера
+     */
     private String printer;
-    // for multimedia
+    /**
+     * Поле стилус - только для компьютера для работы с мультимедиа
+     */
     private String stylus;
 
+    public Computer() {
+    }
 
     public Computer(String cpu, String ram, String graphicsCard, String powerSupply, String hardDisk, String monitor, String headphone, String printer, String stylus) {
         this.cpu = cpu;
@@ -47,9 +76,9 @@ public class Computer {
                 ",\n graphicsCard = " + graphicsCard +
                 ",\n powerSupply = " + powerSupply +
                 ",\n hardDisk = " + hardDisk +
-                ",\n monitor = " + monitor+
-                ",\n headphone = " + headphone+
-                ",\n printer = " + printer+
+                ",\n monitor = " + monitor +
+                ",\n headphone = " + headphone +
+                ",\n printer = " + printer +
                 ",\n stylus = " + stylus;
     }
 }
