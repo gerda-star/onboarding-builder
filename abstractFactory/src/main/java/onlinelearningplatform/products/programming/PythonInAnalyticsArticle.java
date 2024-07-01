@@ -1,6 +1,6 @@
 package onlinelearningplatform.products.programming;
+
 import onlinelearningplatform.products.typeofcontent.Article;
-import onlinelearningplatform.products.typeofcontent.IArticle;
 
 public class PythonInAnalyticsArticle extends Article {
 
