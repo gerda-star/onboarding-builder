@@ -1,27 +1,25 @@
 package onlinelearningplatform;
 
-import onlinelearningplatform.factorys.LearningMaterialFactory;
+import onlinelearningplatform.factorys.ILearningMaterialFactory;
 import onlinelearningplatform.factorys.MathematicsCourseFactory;
 import onlinelearningplatform.factorys.ProgrammingCourseFactory;
 
 public class OnlineCourse {
-    LearningMaterialFactory factory;
+    ILearningMaterialFactory factory;
     boolean isStop = false;
-    Object product;
 
     public OnlineCourse() {
-       act();
+        act();
     }
 
     public void act() {
         while (!isStop) {
             factory = chooseFactory();
-            chooseProduct();
+            factory.chooseProduct();
         }
-
     }
 
-    public LearningMaterialFactory chooseFactory() {
+    public ILearningMaterialFactory chooseFactory() {
         System.out.println("********************"
                 + "\nДобро пожаловать на онлайн-платформу!"
                 + "\nВыбирай направление: математика, программирование"
@@ -47,36 +45,5 @@ public class OnlineCourse {
         }
         return factory;
     }
-
-    public void chooseProduct() {
-        System.out.println("***********"
-                + "\nВыбираем продукт:");
-        for (String product : factory.availableProducts) {
-            System.out.println("- " + product);
-        }
-        String choice = Reader.scan.nextLine().toLowerCase();
-        switch (choice) {
-            case "видео":
-                System.out.println("==== Поработаем с видео ====");
-                product = factory.createVideo();
-                break;
-            case "статья":
-                System.out.println("==== Поработаем со статьями ====");
-                product =factory.createArticle();
-                break;
-            case "тест":
-                System.out.println("==== Поработаем с тестами ====");
-                product =factory.createQuiz();
-                break;
-            default:
-                System.out.println("- Такого продукта неть -");
-                System.out.println("====== Пусть будет статья ======");
-                factory.createQuiz();
-        }
-        if (product == null) {
-            System.out.println("Работа в этом разделе пока недоступна");
-        }
-    }
-
 
 }

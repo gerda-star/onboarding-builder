@@ -2,15 +2,15 @@ package onlinelearningplatform.products.mathematics;
 
 import onlinelearningplatform.products.typeofcontent.Video;
 
-public class TheoryOfProbabilityVideo implements Video {
-    public TheoryOfProbabilityVideo() {
+public class TheoryOfProbabilityVideo extends Video {
 
+    public TheoryOfProbabilityVideo() {
     }
 
     @Override
     public void uploadVideo() {
         System.out.println("Успех!"
-                +"\n Видео-лекция по теории вероятностей успешно загружена на платформу");
+                + "\n Видео-лекция по теории вероятностей успешно загружена на платформу");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class TheoryOfProbabilityVideo implements Video {
 
     @Override
     public void convertVideoToText() {
-        System.out.println("Вероятность выйгрыша крайне мала");
+        System.out.println("Перессказ видео: Вероятность выйгрыша крайне мала");
     }
-    
+
 }
