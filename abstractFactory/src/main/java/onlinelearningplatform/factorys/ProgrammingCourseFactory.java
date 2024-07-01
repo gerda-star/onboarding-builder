@@ -1,13 +1,15 @@
 package onlinelearningplatform.factorys;
 
-import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.mathematics.PrimeNumbersArticle;
+import onlinelearningplatform.products.programming.PythonInAnalyticsArticle;
+import onlinelearningplatform.products.typeofcontent.IArticle;
 import onlinelearningplatform.products.typeofcontent.Quiz;
 import onlinelearningplatform.products.typeofcontent.Video;
 
 public class ProgrammingCourseFactory implements LearningMaterialFactory {
 
     Video video;
-    Article article;
+    IArticle article;
     Quiz quiz;
 
     public ProgrammingCourseFactory() {
@@ -20,8 +22,10 @@ public class ProgrammingCourseFactory implements LearningMaterialFactory {
     }
 
     @Override
-    public Article createArticle() {
-        return null;
+    public IArticle createArticle() {
+        article = new PythonInAnalyticsArticle();
+        article.chooseAct();
+        return article;
     }
 
     @Override

@@ -1,29 +1,21 @@
 package onlinelearningplatform.products.mathematics;
 
+import onlinelearningplatform.Reader;
 import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.typeofcontent.IArticle;
 
-public class PrimeNumbersArticle implements Article {
-    String title;
+public class PrimeNumbersArticle extends Article {
 
-    public PrimeNumbersArticle(String title) {
-        this.title = title;
+    public PrimeNumbersArticle() {
+        super();
     }
 
     @Override
     public void publishArticle() {
         System.out.println("Успех!"
-                +"\n Вы опубликовали статью о простых числах");
+                +"\n Вы опубликовали статью о простых числах: " + super.title);
     }
 
-    @Override
-    public void openArticle() {
-        System.out.println("Тут открылась статья '" + title + "'");
-    }
-
-    @Override
-    public void showBriefReport() {
-        System.out.println("Тут будет краткий коспект статьи");
-    }
 
 
 }

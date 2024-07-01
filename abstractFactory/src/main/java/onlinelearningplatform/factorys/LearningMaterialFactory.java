@@ -1,6 +1,6 @@
 package onlinelearningplatform.factorys;
 
-import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.typeofcontent.IArticle;
 import onlinelearningplatform.products.typeofcontent.Quiz;
 import onlinelearningplatform.products.typeofcontent.Video;
 
@@ -12,7 +12,7 @@ public interface LearningMaterialFactory {
 
     Video createVideo();
 
-    Article createArticle();
+    IArticle createArticle();
 
     Quiz createQuiz();
 

@@ -1,22 +1,17 @@
 package onlinelearningplatform.products.programming;
 import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.typeofcontent.IArticle;
 
-public class PythonInAnalyticsArticle implements Article {
-    String title;
+public class PythonInAnalyticsArticle extends Article {
 
-    public PythonInAnalyticsArticle(String title) {
-        this.title = title;
+    public PythonInAnalyticsArticle() {
+        super();
     }
 
     @Override
     public void publishArticle() {
         System.out.println("Успех!"
-                + "\n Вы опубликовали статью про анализ данных с ипользлванием пайтон ");
-    }
-
-    @Override
-    public void openArticle() {
-        System.out.println("Тут открылась статья '" + title + "'");
+                + "\n Вы опубликовали статью про анализ данных с ипользлванием пайтон: " + super.title);
     }
 
     @Override

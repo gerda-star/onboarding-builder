@@ -5,6 +5,7 @@ import onlinelearningplatform.products.mathematics.BasicMathQuiz;
 import onlinelearningplatform.products.mathematics.PrimeNumbersArticle;
 import onlinelearningplatform.products.mathematics.TheoryOfProbabilityVideo;
 import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.typeofcontent.IArticle;
 import onlinelearningplatform.products.typeofcontent.Quiz;
 import onlinelearningplatform.products.typeofcontent.Video;
 
@@ -26,9 +27,9 @@ public class MathematicsCourseFactory implements LearningMaterialFactory {
     }
 
     @Override
-    public Article createArticle() {
-        article = new PrimeNumbersArticle("Впечатляющий заголовок");
-        chooseAct(article);
+    public IArticle createArticle() {
+        article = new PrimeNumbersArticle();
+        article.chooseAct();
         return article;
     }
 
@@ -75,23 +76,6 @@ public class MathematicsCourseFactory implements LearningMaterialFactory {
         }
     }
 
-    public void chooseAct(Article article) {
-        System.out.println("Доступные действия: опубликовать, открыть, краткий перессказ");
-        String action = Reader.scan.nextLine().toLowerCase();
-        switch (action) {
-            case "опубликовать":
-                article.publishArticle();
-                break;
-            case "открыть":
-                article.openArticle();
-                break;
-            case "краткий перессказ":
-                article.showBriefReport();
-                break;
-            default:
-                System.out.println("- Такой возможносити пока нет -");
-        }
-    }
 
 }
 
