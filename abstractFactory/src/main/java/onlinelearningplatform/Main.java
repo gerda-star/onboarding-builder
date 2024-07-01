@@ -1,7 +1,5 @@
-package onlineLearningPlatform;
+package onlinelearningplatform;
 
-
-import java.util.Scanner;
 
 public class Main {
 

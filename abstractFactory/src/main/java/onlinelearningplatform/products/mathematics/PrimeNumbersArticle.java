@@ -1,8 +1,8 @@
-package onlineLearningPlatform.products;
+package onlinelearningplatform.products.mathematics;
 
-import onlineLearningPlatform.Reader;
+import onlinelearningplatform.products.typeofcontent.Article;
 
-public class PrimeNumbersArticle implements Article{
+public class PrimeNumbersArticle implements Article {
     String title;
 
     public PrimeNumbersArticle(String title) {

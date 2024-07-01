@@ -1,4 +1,4 @@
-package onlinelearningplatform.products;
+package onlinelearningplatform.products.typeofcontent;
 
 public interface Video {
     void uploadVideo();

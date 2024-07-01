@@ -1,6 +1,7 @@
-package onlineLearningPlatform.products;
+package onlinelearningplatform.products.mathematics;
 
-import onlineLearningPlatform.Reader;
+import onlinelearningplatform.Reader;
+import onlinelearningplatform.products.typeofcontent.Quiz;
 
 
 public class BasicMathQuiz implements Quiz {

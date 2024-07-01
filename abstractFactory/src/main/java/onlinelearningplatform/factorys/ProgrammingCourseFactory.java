@@ -1,9 +1,8 @@
-package onlineLearningPlatform.factorys;
+package onlinelearningplatform.factorys;
 
-import onlineLearningPlatform.Reader;
-import onlineLearningPlatform.products.Article;
-import onlineLearningPlatform.products.Quiz;
-import onlineLearningPlatform.products.Video;
+import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.typeofcontent.Quiz;
+import onlinelearningplatform.products.typeofcontent.Video;
 
 public class ProgrammingCourseFactory implements LearningMaterialFactory {
 

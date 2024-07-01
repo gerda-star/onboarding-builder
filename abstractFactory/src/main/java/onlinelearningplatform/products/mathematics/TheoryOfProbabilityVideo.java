@@ -1,8 +1,8 @@
-package onlineLearningPlatform.products;
+package onlinelearningplatform.products.mathematics;
 
-import onlineLearningPlatform.Reader;
+import onlinelearningplatform.products.typeofcontent.Video;
 
-public class TheoryOfProbabilityVideo implements Video{
+public class TheoryOfProbabilityVideo implements Video {
     public TheoryOfProbabilityVideo() {
 
     }

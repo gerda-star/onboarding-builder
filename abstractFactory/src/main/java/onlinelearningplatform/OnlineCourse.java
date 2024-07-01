@@ -1,10 +1,8 @@
-package onlineLearningPlatform;
+package onlinelearningplatform;
 
-import onlineLearningPlatform.factorys.LearningMaterialFactory;
-import onlineLearningPlatform.factorys.MathematicsCourseFactory;
-import onlineLearningPlatform.factorys.ProgrammingCourseFactory;
-
-import java.util.Scanner;
+import onlinelearningplatform.factorys.LearningMaterialFactory;
+import onlinelearningplatform.factorys.MathematicsCourseFactory;
+import onlinelearningplatform.factorys.ProgrammingCourseFactory;
 
 public class OnlineCourse {
     LearningMaterialFactory factory;

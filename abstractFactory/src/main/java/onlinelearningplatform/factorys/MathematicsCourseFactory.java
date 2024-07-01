@@ -1,14 +1,18 @@
-package onlineLearningPlatform.factorys;
+package onlinelearningplatform.factorys;
 
-import onlineLearningPlatform.Reader;
-import onlineLearningPlatform.products.*;
+import onlinelearningplatform.Reader;
+import onlinelearningplatform.products.mathematics.BasicMathQuiz;
+import onlinelearningplatform.products.mathematics.PrimeNumbersArticle;
+import onlinelearningplatform.products.mathematics.TheoryOfProbabilityVideo;
+import onlinelearningplatform.products.typeofcontent.Article;
+import onlinelearningplatform.products.typeofcontent.Quiz;
+import onlinelearningplatform.products.typeofcontent.Video;
 
 
-public class MathematicsCourseFactory implements LearningMaterialFactory{
+public class MathematicsCourseFactory implements LearningMaterialFactory {
     Video video;
     Quiz quiz;
     Article article;
-
 
 
     public MathematicsCourseFactory() {
@@ -20,9 +24,10 @@ public class MathematicsCourseFactory implements LearningMaterialFactory{
         chooseAct(video);
         return video;
     }
+
     @Override
     public Article createArticle() {
-        article = new PrimeNumbersArticle( "Впечатляющий заголовок");
+        article = new PrimeNumbersArticle("Впечатляющий заголовок");
         chooseAct(article);
         return article;
     }
@@ -51,6 +56,7 @@ public class MathematicsCourseFactory implements LearningMaterialFactory{
                 System.out.println("- Такой возможносити пока нет -");
         }
     }
+
     public void chooseAct(Quiz quiz) {
         System.out.println("Доступные действия: создать, пройти, показать результаты");
         String action = Reader.scan.nextLine().toLowerCase();
